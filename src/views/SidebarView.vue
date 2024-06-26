@@ -54,10 +54,22 @@
       <li><router-link to="/example06-1">Async Component</router-link></li>
       <li><router-link to="/example06-2">keep-alive</router-link></li>
     </ul>
-    <!-- <h3>Form Input Bindings</h3>
+    <h3>Form Input Bindings</h3>
     <ul>
       <li><router-link to="/example07-1">v-model</router-link></li>
       <li><router-link to="/example07-2">Examples</router-link></li>
-    </ul> -->
+    </ul>
+    <h3>Global Store</h3>
+    <ul>
+      <li>
+        <router-link to="/example08-1">State</router-link>
+      </li>
+      <li>
+        <router-link to="/example08-2">Actions</router-link>
+      </li>
+      <li>
+        <router-link to="/example08-3">Getters</router-link>
+      </li>
+    </ul>
   </div>
 </template>

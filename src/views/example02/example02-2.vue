@@ -36,7 +36,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import type { User } from '@type'
+import type { User } from '@/type'
 import { computed, ref } from 'vue'
 const user: User = {
   name: 'BO',

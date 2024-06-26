@@ -70,11 +70,11 @@
   </div>
 </template>
 <script lang="ts" setup>
-import type { user } from '@type'
+import type { User } from '@/type'
 import { computed, ref, watch, watchEffect } from 'vue'
 
 const message = 'hello'
-const user1: user = {
+const user1: User = {
   name: 'syl',
   insertTime: '2024 -06-25T19:58:59',
   address: '956'
