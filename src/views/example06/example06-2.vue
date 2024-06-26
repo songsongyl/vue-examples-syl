@@ -33,5 +33,8 @@ const toggle = ref(false)
         </KeepAlive>
       </RouterView>
     </p>
+    使用 RouterView 来渲染当前路由对应的组件。
+    使用KeepAlive来缓存这个组件,使其在路由切换时保持其状态。 使用动态组件component
+    来实际渲染从RouterView 插槽v-slot中获取的组件，并使用路由路径作为缓存的键。 以上不写也可以
   </div>
 </template>
