@@ -70,6 +70,27 @@
       <li>
         <router-link to="/example08-3">Getters</router-link>
       </li>
+      <li>
+        <router-link to="/example08-4">Define Custom Global Store</router-link>
+      </li>
+    </ul>
+    <h3>Passing Data to Child Component</h3>
+    <ul>
+      <li>
+        <router-link to="/example09-1">defineProps()</router-link>
+      </li>
+      <li>
+        <router-link to="/example09-4">Passing Functions</router-link>
+      </li>
+      <li>
+        <router-link to="/example09-5">defineModel()</router-link>
+      </li>
+      <li>
+        <router-link to="/example09-3">defineExpose()</router-link>
+      </li>
+      <li>
+        <router-link to="/example09-2">defineEmits()</router-link>
+      </li>
     </ul>
   </div>
 </template>
