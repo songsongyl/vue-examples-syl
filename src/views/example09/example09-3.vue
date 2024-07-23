@@ -14,7 +14,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import expose from './ExposeLoop3.vue'
+import expose from './ExposeLoop.vue'
 // 声明绑定的类型与子组件暴露的类型相同
 const exposeR = ref<{ userR?: { name: '' }; stopLoop?: () => void }>({})
 </script>

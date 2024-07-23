@@ -68,6 +68,7 @@ const close = () => emit('emitClose')
   background: white;
   top: 30px;
   position: relative;
+  /* 相对也可以 */
   border-radius: 5px;
   box-shadow:
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
