@@ -112,6 +112,9 @@
       <li>
         <router-link to="/homework-01">模拟 React reducer 整合状态逻辑示例</router-link>
       </li>
+      <li>
+        <router-link to="/foodShare">WEB实验二-美食分享</router-link>
+      </li>
     </ul>
   </div>
 </template>

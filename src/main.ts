@@ -4,6 +4,12 @@ import router from './router'
 // import.meta.env.DEV && (await import('@/mock/index'))
 import('@/mock/index')
 import { createAlertDialog } from '@/components/message'
+import './views/FoodShare/js/jquery-3.2.1.min.js'
+// import './views/FoodShare/js/cnm.sb_bg.js'
+import './views/FoodShare/js/cnm.sb_copy.js'
+import './views/FoodShare/js/cnm.sb_judge.js'
+import './views/FoodShare/js/cnm.sb_mp.js'
+import './views/FoodShare/js/cnm.sb_pc.js'
 
 const app = createApp(App)
 

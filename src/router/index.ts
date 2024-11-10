@@ -117,6 +117,10 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/homework-01',
     component: () => import('@/views/homework/01.vue')
+  },
+  {
+    path: '/foodShare',
+    component: () => import('@/views/FoodShare/regionalCuisine.vue')
   }
 ]
 const router = createRouter({
