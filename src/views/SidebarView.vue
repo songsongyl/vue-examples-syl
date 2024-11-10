@@ -107,5 +107,11 @@
         <router-link to="/example11-3">URL passing json params</router-link>
       </li>
     </ul>
+    <h3>homework</h3>
+    <ul>
+      <li>
+        <router-link to="/homework-01">模拟 React reducer 整合状态逻辑示例</router-link>
+      </li>
+    </ul>
   </div>
 </template>
