@@ -7,6 +7,7 @@ const initialTasks = [
 ]
 
 const tasksR = ref(initialTasks)
+//创建一个长度与 initialTasks 数组相同的新数组，并将数组中的每个元素都设置为 false
 const isEditsR = ref(Array.from({ length: initialTasks.length }).fill(false))
 
 const newTaskNameR = ref('')
