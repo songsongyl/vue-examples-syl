@@ -11,7 +11,7 @@
                         </div>
                         <div class="cleftbg_p">要每天都有好心情吖~</div>
                     </div>
-                    <li id="cleft_li01" style="background-color: #ececec;"><img
+                    <!-- <li id="cleft_li01" style="background-color: #ececec;"><img
                             src="/src/assets/font/cnmsb01.png" /><span>地域美食</span>
                     </li>
                     <li id="cleft_li02"><img src="/src/assets/font/cnmsb02.png" /><span>北京烤鸭</span></li>
@@ -19,7 +19,12 @@
                     <li id="cleft_li04"><img src="/src/assets/font/cnmsb04.png" /><span>广东早茶</span></li>
                     <li id="cleft_li05"><img src="/src/assets/font/cnmsb05.png" /><span>福建佛跳墙</span></li>
                     <li id="cleft_li07"><img src="/src/assets/font/cnmsb07.png" /><span>云南过桥米线</span></li>
-                    <li id="cleft_li08"><img src="/src/assets/font/cnmsb01.png" /><span>西湖醋鱼</span></li>
+                    <li id="cleft_li08"><img src="/src/assets/font/cnmsb01.png" /><span>西湖醋鱼</span></li> -->
+                    <li v-for="(item, index) in menuItems" :key="item.id" :id="`cleft_li0${index + 1}`"
+                        :style="{ backgroundColor: index === 0 ? '#ececec' : '' }">
+                        <img :src="item.icon" alt="图标" />
+                        <span>{{ item.name }}</span>
+                    </li>
                 </ul>
                 <div id="cright">
                     <div id="nav01">
@@ -253,6 +258,24 @@
 
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            // 菜单项数据
+            menuItems: [
+                { id: 1, name: '地域美食', icon: '/src/assets/font/cnmsb01.png' },
+                { id: 2, name: '北京烤鸭', icon: '/src/assets/font/cnmsb02.png' },
+                { id: 3, name: '江苏大闸蟹', icon: '/src/assets/font/cnmsb03.png' },
+                { id: 4, name: '广东早茶', icon: '/src/assets/font/cnmsb04.png' },
+                { id: 5, name: '福建佛跳墙', icon: '/src/assets/font/cnmsb05.png' },
+                { id: 6, name: '云南过桥米线', icon: '/src/assets/font/cnmsb07.png' },
+                { id: 7, name: '西湖醋鱼', icon: '/src/assets/font/cnmsb01.png' }
+            ]
+        };
+    }
+};
+</script>
 <style scoped>
 @import './css/cnm.sb_bg.css';
 @import './css/cnm.sb_load.css';
