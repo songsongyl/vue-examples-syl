@@ -2,14 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 // import.meta.env.DEV && (await import('@/mock/index'))
-import('@/mock/index')
+// import('@/mock/index')
 import { createAlertDialog } from '@/components/message'
 import './views/FoodShare/js/jquery-3.2.1.min.js'
-// import './views/FoodShare/js/cnm.sb_bg.js'
-import './views/FoodShare/js/cnm.sb_copy.js'
-import './views/FoodShare/js/cnm.sb_judge.js'
-import './views/FoodShare/js/cnm.sb_mp.js'
-import './views/FoodShare/js/cnm.sb_pc.js'
 
 const app = createApp(App)
 
@@ -19,8 +14,8 @@ app.mount('#app')
 
 // 全局未捕获异常处理
 // 统一弹出错误信息模态框
-app.config.errorHandler = (err) => {
-  const message = err as string
-  console.error(message)
-  createAlertDialog(message)
-}
+// app.config.errorHandler = (err) => {
+//   const message = err as string
+//   console.error(message)
+//   createAlertDialog(message)
+// }

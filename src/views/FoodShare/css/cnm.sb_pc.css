@@ -2,22 +2,14 @@
 	padding: 0;
 	margin: 0;
 }
-/* 居中，宋体 */
-body,html{
-	text-align: center;
-	font-family: "宋体";
-}
+
 a{
 	text-decoration: none;
 }
 li{
 	list-style: none;
 }
-/* 特殊英文字体引入
-实现方式: font: 26px cnm,Arial,sans-serif; */
-@font-face {
-	font-family:cnm;src:url("/src/assets/font/cnm.sb.ttf")
-}
+
 #etext{
 	width: 100%;
 	height: 100%;
@@ -29,7 +21,7 @@ li{
 	bottom: 0;
 	margin: auto;
 	z-index: 2;
-	transform: translateY(50%);
+	transform: translateY(50%) translateX(45%);
 	color: #F9F9F9;
 	font-size: 22px;
 	font-weight: bolder;
@@ -41,9 +33,7 @@ li{
 	position: fixed;
 	top: 0;
 	left: 0;
-	/* 站点背景图片 */
-	background-image: url(../img/start.jpg);
-	/* background-image: url(图片api路径); */
+	background-image: url(/src/assets/images/start.jpg);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -97,7 +87,6 @@ li{
 .cleft_topbg{
 	width: 100%;
 	height: 120px;
-	/* 左上角头像下面的背景图片 */
 	background-image: url(../images/8.png);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -179,7 +168,7 @@ li{
 	height: 100%;
 	background-color: #efefef;
 	/* 官网首页页面背景图片 */
-	background-image: url('../images/image\ copy.png');
+	background-image: url('/src/assets/images/image\ copy.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -357,7 +346,7 @@ li{
   }
 }
 
-/*-----Nav02-关于本站-内容区域-右侧------*/
+
 #nav02{
 	width: 100%;
 	height: 100%;
@@ -388,8 +377,7 @@ li{
 .nav02_bg{
 	width: 100%;
 	height: 360px;
-	/* 关于站长页面顶部头图 */
-	background-image: url(../img/guanyuzhanzhang.jpg);
+	background-image: url('/src/assets/images/image\ copy\ 5.png');
 	background-size: cover;
 	background-position: center bottom;
 	background-repeat: no-repeat;
@@ -427,7 +415,7 @@ li{
 }
 .nav02_grzl_headimg{
 	width: 25%;
-	height: 24%;
+	height: 100%;
 	border-right: 1px dashed rgba(40,40,40,0.2);
 	float: left;
 }
@@ -441,27 +429,46 @@ li{
 	width: 70%;
 	height: 36px;
 	border-radius: 4px;
-	background-color: #a5adf6;	/* 联系站长按钮 */
+	background-color: #a5adf6;	
 	color: #f9f9f9;
 	font-size: 15px;
 	line-height: 36px;
 	text-align: center;
 	margin-top: 40px;
 }
-.nav02_grzl_txt{
-	width: 70%;
-	height: 20%;
-	float: left;
-	padding-left: 10%;
+
+.nav02_grzl_txt {
+  width: 70%; /* 保持原有宽度 */
+  height: auto; /* 使用auto，让内容自适应高度 */
+  float: left;
+  padding-left: 10%;
+  box-sizing: border-box; /* 确保padding不影响元素的总宽度 */
+  margin-bottom: 20px; /* 为了避免底部紧贴其他元素，可以增加一些外边距 */
 }
-.nav02_grzl_txt p{
-	font-size: 14px;
-	font-weight: 400;
-	letter-spacing: 1px;
-	line-height: 50px;
-	color: rgba(40,40,40,0.9);
-	border-bottom: 1px dashed rgba(40,40,40,0.08);
+
+.nav02_grzl_txt p {
+  font-size: 16px; 
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5; 
+  color: rgba(40, 40, 40, 0.9);
+  border-bottom: 1px dashed rgba(40, 40, 40, 0.08);
+  padding: 10px 0; 
+  margin: 0; /* 确保没有多余的外边距影响布局 */
 }
+
+@media (max-width: 768px) {
+  .nav02_grzl_txt {
+    width: 100%; /* 在小屏幕上使用100%宽度 */
+    padding-left: 5%; /* 减小左侧内边距 */
+  }
+
+  .nav02_grzl_txt p {
+    font-size: 14px; 
+    line-height: 1.4; 
+  }
+}
+
 .nav02_kj p{
 	width: 90%;
 	text-align: justify;
@@ -474,8 +481,7 @@ li{
 	color: rgba(40,40,40,0.9);
 	border-bottom: 1px dashed rgba(40,40,40,0.2);
 }
-.mb03{
-}
+
 .mb03>p{
 	border: 0px;
 	clear: left;
@@ -596,13 +602,13 @@ li{
 	width: 115px;
 }
 
-/* 页面四-商业合作 */
+/* 页面四 */
 #nav04{
 	width: 100%;
 	height: 100%;
 	background-color: #efefef;
-	/* 商业合作页面背景图片1 */
-	background-image: url('../images/2.png');
+	
+	background-image: url('/src/assets/images/2.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -614,8 +620,8 @@ li{
 .nav04_bg{
 	width: 100%;
 	height: 100%;
-	/* 商业合作页面背景图片2 */
-	background-image: url(../images/2.png);
+	
+	background-image: url('/src/assets/images/2.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -657,30 +663,31 @@ li{
 .nav04_zsc p{
 	padding-top: 15px;
 	width: 100%;
-	height: 135px;
+	height: 150px;
 	background-color: #cfb76d;
 	text-align: center;
 	/* line-height: 20px; */
 	font-size: 20px;
 	font-weight: 400;
 	color: #242222;
+	margin-bottom: 0;
 }
 .nav04_zsc>img{
 	width: 100%;
 }
 .nav04_zsc p{
 	position: absolute;
-	bottom: 10px;
+	bottom: 0px;
 	left: 0;
 	right: 0;
 	margin: auto;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 400;
 	color: #d7d7d7;
 	letter-spacing: 2px;
 }
 
-/* 页面五-站点展示 */
+/* 页面五 */
 #nav05{
 	width: 100%;
 	height: 100%;
@@ -711,8 +718,8 @@ li{
 .nav05_top{
 	width: 100%;
 	height: 420px;
-	/* 站点展示页面顶部头图 */
-	background-image: url(../img/zhandian.jpg);
+	
+	background-image: url(/src/assets/images/zhandian.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -734,8 +741,8 @@ li{
 	top: 0;
 	left: 0;
 	z-index: 3;
-	/* 站点展示页面顶部头图 */
-	background-image: url(../img/zhandian.jpg);
+	
+	background-image: url(/src/assets/images/zhandian.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -746,8 +753,7 @@ li{
 	height: 90px;
 	position: absolute;
 	z-index: 5;
-	/* 站点展示页面宇航员图片 */
-	background-image: url(../img/yuhangyuan.png);
+	background-image: url(/src/assets/images/yuhangyuan.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -758,8 +764,7 @@ li{
 	height: 305px;
 	position: absolute;
 	z-index: 5;
-	/* 站点展示页面顶部鲸鱼图片 */
-	background-image: url(../img/jing.png);
+	background-image: url(/src/assets/images/jing.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -780,8 +785,10 @@ li{
 	cursor: pointer;
 }
 .nav05_top_fj img{
-	width: 30px;
+	width: 40px;
 	animation: nav05_fj 5s infinite;
+	position: absolute;
+	left: 20%;
 }
 /* 动画定义 */
 @keyframes nav05_bg
@@ -935,7 +942,7 @@ li{
 	margin: 60px 0px 40px 0px;
 }
 
-/*-----Nav07-本站源码-内容区域-右侧------*/
+/*-----Nav07------*/
 #nav07{
 	width: 100%;
 	height: 100%;
@@ -966,8 +973,7 @@ li{
 .nav07_bg{
 	width: 100%;
 	height: 360px;
-	/* 本站源码页面顶部头图 */
-	background-image: url(../images/9.png);
+	background-image: url(/src/assets/images/9.png);
 	background-size: cover;
 	background-position: center bottom;
 	background-repeat: no-repeat;
@@ -977,7 +983,6 @@ li{
 	width: 240px;
 	height: 60px;
 	line-height: 60px;
-	/* 顶图文字背景颜色 */
 	background-image: linear-gradient(to top left,#25d8df , #CD69C9);
 	border-radius: 5px;
 	padding: 0px 10px;
@@ -1050,7 +1055,7 @@ li{
 	margin: 30px 0px;
 }
 
-/*-----Nav08-关于本站-内容区域-右侧------*/
+/*-----Nav08------*/
 #nav08{
 	width: 100%;
 	height: 100%;
@@ -1082,7 +1087,7 @@ li{
 	width: 100%;
 	height: 360px;
 	/* 静态资源页面顶部头图 */
-	background-image: url(../images/3.png);
+	background-image: url(/src/assets/images/3.png);
 	background-size: cover;
 	background-position: center bottom;
 	background-repeat: no-repeat;

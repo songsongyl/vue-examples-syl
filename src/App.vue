@@ -1,33 +1,35 @@
 <script setup lang="ts">
 import SidebarView from '@/views/SidebarView.vue'
+import Food from '@/views/FoodShare/regionalCuisine.vue'
 </script>
 
 <template>
-  <SidebarView id="sidebar" />
-  <RouterView id="router" />
+    <!-- <SidebarView id="sidebar" /> -->
+    <Food  id="food"/>
+    <!-- <RouterView id="router" /> -->
 </template>
-<style>
-/* 最宽为全屏-y轴滚动条宽度 */
+
+<style scoped>
+
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  max-width: calc(100vw - 17px);
 }
+
 #app {
-  display: flex;
+  /* display: flex;
+  flex-direction: column; */
   max-width: 1200px;
-  margin: 10px auto;
-  /* height: 100vw; */
+  /* margin: 10px auto; */
+  height: 100vh;
 }
-#sidebar {
-  border: 1px solid red;
-  width: 300px;
-  padding: 15px;
-}
-#router {
-  border: 1px solid red;
-  flex: 1;
-  padding: 15px;
+
+#food {
+  /* flex-grow: 1; */
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+  overflow: auto
 }
 </style>
